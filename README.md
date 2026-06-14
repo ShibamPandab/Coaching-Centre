@@ -71,3 +71,13 @@ The app will be available at `http://localhost:5173` by default.
 ## Keywords
 
 `Coaching Institute Website` · `IIT-JEE NEET Prep UI` · `Education Platform Design` · `Premium Academy Website` · `Multi-Page React Coaching Site`
+
+---
+
+## ⚠️ License Notice
+
+**Source code provided for portfolio demonstration purposes only.**
+
+This repository is intended to showcase development, design, and engineering work.
+
+Commercial reuse, redistribution, resale, cloning, or reproduction of this project without explicit written permission is prohibited.
