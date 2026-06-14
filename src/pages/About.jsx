@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Target, Compass, Award, ShieldAlert, Check } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
+import teacherImg from '../assets/teacher.png';
 
 export default function About() {
   const values = [
@@ -45,7 +46,13 @@ export default function About() {
         <div className="lg:col-span-5 relative flex justify-center">
           <div className="w-64 h-80 sm:w-72 sm:h-96 rounded-xl border border-brand-gold/30 bg-[#161616] relative overflow-hidden flex flex-col justify-end p-6 border-gold-glow">
             {/* Elegant luxury pattern backdrop */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0F0F0F] to-brand-gold-dark/10 z-0" />
+            <img 
+              src={teacherImg} 
+              alt="Dr. Ananya Shastri" 
+              className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 select-none pointer-events-none" 
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A80] to-[#0A0A0A10] z-0" />
             <div className="absolute inset-0 opacity-10 section-dot-grid z-0" />
             <div className="z-10 text-center space-y-1">
               <p className="text-white text-base font-bold tracking-wide uppercase">

@@ -8,7 +8,7 @@ export default function Home() {
   const stats = [
     { target: '1', prefix: 'AIR ', suffix: '', label: 'JEE Advanced' },
     { target: '4', prefix: 'AIR ', suffix: '', label: 'NEET Pre-Medical' },
-    { target: '9998', prefix: '', suffix: '%ile', label: 'JEE Mains Top Score' },
+    { target: '99.98', prefix: '', suffix: '%ile', label: 'JEE Mains Top Score' },
     { target: '18500', prefix: '', suffix: '+', label: 'IITian & Doctor Alumni' },
   ];
 

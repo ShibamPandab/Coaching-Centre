@@ -30,9 +30,12 @@ export default function AnimatedCounter({ target, duration = 1200, prefix = "", 
   useEffect(() => {
     if (!hasStarted) return;
 
-    // Remove any letters or symbols to get raw number
+    // Remove any letters or symbols except digits and dot to get raw number
     const targetStr = target.toString();
-    const targetNum = parseInt(targetStr.replace(/[^0-9]/g, ''), 10);
+    const hasDecimal = targetStr.includes('.');
+    const decimalPlaces = hasDecimal ? targetStr.split('.')[1].length : 0;
+    const cleanedStr = targetStr.replace(/[^0-9.]/g, '');
+    const targetNum = parseFloat(cleanedStr);
     
     if (isNaN(targetNum)) {
       setCount(target);
@@ -47,14 +50,14 @@ export default function AnimatedCounter({ target, duration = 1200, prefix = "", 
       
       // Easing: easeOutCubic
       const ease = 1 - Math.pow(1 - progress, 3);
-      const currentVal = Math.floor(ease * targetNum);
+      const currentVal = ease * targetNum;
       
-      setCount(currentVal);
+      setCount(currentVal.toFixed(decimalPlaces));
 
       if (progress < 1) {
         window.requestAnimationFrame(step);
       } else {
-        setCount(targetNum);
+        setCount(target);
       }
     };
 
